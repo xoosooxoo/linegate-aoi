@@ -206,7 +206,7 @@ AI 결과는 최종 품질 결정을 자동 확정하는 것이 아니라,
 ## Project Structure
 
 ```text
-linegate-aoi-v1.0/
+linegate-aoi/
 ├─ backend/
 │  ├─ main.py
 │  ├─ decision_engine.py
@@ -217,11 +217,8 @@ linegate-aoi-v1.0/
 ├─ models/
 │  └─ best_yolo11s.pt
 ├─ demo_images/
-│  ├─ H-H-H_case/
-│  └─ R-H-H_case/
-├─ outputs/
-│  ├─ overlays/
-│  └─ inspection_logs/
+   ├─ case1_v1-hold_v2-hold_v21-hold/
+   └─ case2_v1-release_v2-hold_v21-hold/
 ├─ .gitignore
 ├─ requirements.txt
 └─ README.md
