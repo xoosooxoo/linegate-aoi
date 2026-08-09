@@ -224,6 +224,22 @@ linegate-aoi/
 └─ README.md
 ```
 
+| 경로                                               | 역할                                                                                                                                                                             |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `frontend/app.py`                                | **LineGate AOI 메인 웹 애플리케이션.** Streamlit 기반 UI를 제공하며 V1 Superb AI Deployment 호출, V2/V2.1 FastAPI 호출, 3-View 결과 통합, RELEASE/HOLD/REVIEW 표시, Overlay 시각화 및 Human Approval을 담당합니다. |
+| `backend/main.py`                                | **V2/V2.1 납땜 검사용 FastAPI 서버.** 업로드 이미지를 YOLO11s-seg 모델에 전달하고 납땜 결함 추론 결과와 Polygon Mask Overlay를 반환합니다.                                                                         |
+| `backend/decision_engine.py`                     | V2/V2.1 추론 결과를 기반으로 클래스 및 Confidence를 해석하고 View 단위 판정에 필요한 규칙을 처리합니다.                                                                                                          |
+| `backend/__init__.py`                            | `backend` 디렉터리를 Python 패키지로 인식시키기 위한 파일입니다.                                                                                                                                    |
+| `frontend/__init__.py`                           | `frontend` 디렉터리를 Python 패키지로 인식시키기 위한 파일입니다.                                                                                                                                   |
+| `models/best_yolo11s.pt`                         | **V2/V2.1 최종 납땜 검사 모델 가중치.** 260장의 통합 V2/V2.1 데이터로 학습한 YOLO11s-seg 모델입니다.                                                                                                      |
+| `demo_images/`                                   | LineGate AOI 시연에 사용하는 동일 부품의 V1/V2/V2.1 이미지 세트입니다.                                                                                                                             |
+| `demo_images/case1_v1-hold_v2-hold_v21-hold/`    | V1 실장 상태와 V2/V2.1 납땜 검사에서 모두 HOLD 근거가 발생하는 시연 Case입니다.                                                                                                                         |
+| `demo_images/case2_v1-release_v2-hold_v21-hold/` | V1은 정상이나 V2/V2.1에서 납땜 결함을 발견하여 최종 HOLD가 되는 Multi-View 검사의 필요성을 보여주는 Case입니다.                                                                                                   |
+| `requirements.txt`                               | 프로젝트 실행에 필요한 Python 패키지 목록입니다. Python 3.12 환경을 기준으로 사용합니다.                                                                                                                     |
+| `.gitignore`                                     | API Key, Python cache, 실행 로그 및 생성 결과 등 GitHub에 업로드하지 않아야 할 파일을 제외합니다.                                                                                                          |
+| `README.md`                                      | 프로젝트 개요, 모델 구성, 성능, 판정 기준 및 실행 방법을 설명하는 문서입니다.                                                                                                                                 |
+
+
 ## Requirements
 
 - Windows 10 / 11
