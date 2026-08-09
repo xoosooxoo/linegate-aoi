@@ -10,6 +10,13 @@ RELEASE / HOLD / REVIEW 권고를 제공하는 AI 품질 게이트 PoC**입니�
 V1은 부품 실장 상태 검사에, V2·V2.1은 좌·우 납땜 접합부 상태 검사에 사용하며,
 V3는 본 모델 학습 범위에서 제외했습니다.
 
+## Demo
+https://github-production-user-asset-6210df.s3.amazonaws.com/312392807/633385155-4c73f010-b160-40eb-bdb0-b33a755133c0.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260809%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260809T103050Z&X-Amz-Expires=300&X-Amz-Signature=3f72cf62f6d5a96417f4afda1645cf141a0fd85c1b1d3b6dad627106149ec062&X-Amz-SignedHeaders=host&response-content-type=video%2Fmp4
+
+> 동일 부품의 V1 / V2 / V2.1 이미지를 입력한 뒤,
+> AI 검사 → View별 결함 근거 확인 → RELEASE / HOLD / REVIEW 판정 →
+> Human Approval까지의 전체 흐름을 시연합니다.
+
 ## System Architecture
 
 ```text
