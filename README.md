@@ -1,5 +1,7 @@
 # LineGate AOI
 
+🏆 2026 제 1회 Superb AI X BDAI Vision AI Hackathon 본선 진출 
+
 > AI-Assisted First-Board Quality Gate for SMT Changeovers
 
 LineGate AOI는 SMT 제품 또는 배치 전환 직후 제작되는 첫 생산품(First Board)의 R0805 부품을
